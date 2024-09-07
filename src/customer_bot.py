@@ -97,6 +97,5 @@ async def main():
     await kitchen_application.bot.set_webhook(f"{BASE_URL}/{KITCHEN_BOT_TOKEN}")
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5002))  # استخدام منفذ مختلف عن بوت الزبائن
-    from werkzeug.serving import run_simple
-    run_simple('0.0.0.0', port, app)
+    port = int(os.environ.get('PORT', 5000))  # استخدام منفذ مختلف عن بوت الزبائن
+    app.run(host='0.0.0.0', port=port)
