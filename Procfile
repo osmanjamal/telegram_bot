@@ -1,2 +1,3 @@
-web: gunicorn customer_bot:app
-worker: python kitchen_bot.py
+web: python src/customer_bot.py
+worker: python src/kitchen_bot.py
+release: python src/shared_utils.py
